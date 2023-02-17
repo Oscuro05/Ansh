@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Multiplication Calculator</title>
+	<style>
+		/* Center the form */
+		form {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			margin-top: 50px;
+		}
+	</style>
+</head>
+<body>
+	<form>
+		<label for="num1">Number 1:</label>
+		<input type="number" id="num1" required>
+		<label for="num2">Number 2:</label>
+		<input type="number" id="num2" required>
+		<button type="button" onclick="multiply()">Multiply</button>
+		<p id="result"></p>
+	</form>
+	<script>
+		function multiply() {
+			// Get the two numbers entered by the user
+			let num1 = parseFloat(document.getElementById("num1").value);
+			let num2 = parseFloat(document.getElementById("num2").value);
+			
+			// Multiply the numbers together
+			let product = num1 * num2;
+			
+			// Display the result
+			document.getElementById("result").innerHTML = `The product of ${num1} and ${num2} is ${product}.`;
+		}
+	</script>
+</body>
+</html>
